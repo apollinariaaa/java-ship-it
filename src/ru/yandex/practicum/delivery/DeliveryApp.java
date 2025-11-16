@@ -14,9 +14,14 @@ public class DeliveryApp {
     private static List<Trackable> trackableParcels = new ArrayList<>();
 
     // Три коробки
-    private static ParcelBox<StandardParcel> standardBox = new ParcelBox<>(50);
-    private static ParcelBox<FragileParcel> fragileBox = new ParcelBox<>(30);
-    private static ParcelBox<PerishableParcel> perishableBox = new ParcelBox<>(40);
+    private static final int MAX_STANDARD_BOX_WEIGHT = 50;
+    private static final int MAX_FRAGILE_BOX_WEIGHT = 30;
+    private static final int MAX_PERISHABLE_BOX_WEIGHT = 40;
+    private static final ParcelBox<StandardParcel> standardBox = new ParcelBox<>(MAX_STANDARD_BOX_WEIGHT);
+
+    private static final ParcelBox<FragileParcel> fragileBox = new ParcelBox<>(MAX_FRAGILE_BOX_WEIGHT);
+
+    private static final ParcelBox<PerishableParcel> perishableBox = new ParcelBox<>(MAX_PERISHABLE_BOX_WEIGHT);
 
     public static void main(String[] args) {
         boolean running = true;

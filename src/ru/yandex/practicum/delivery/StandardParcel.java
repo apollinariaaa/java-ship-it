@@ -18,5 +18,6 @@ public class StandardParcel extends Parcel {
     protected int getBaseCost() {
         return BASE_COST;
     }
+
 }
 

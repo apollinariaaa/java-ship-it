@@ -5,6 +5,8 @@ import java.util.List;
 
 public class ParcelBox<T extends Parcel> {
 
+
+
     private int maxWeight;
     private List<T> parcels = new ArrayList<>();
 
@@ -29,5 +31,7 @@ public class ParcelBox<T extends Parcel> {
     public List<T> getAllParcels() {
         return parcels;
     }
+
+
 }
 
